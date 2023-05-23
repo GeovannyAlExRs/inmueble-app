@@ -3,7 +3,12 @@ export const environment = {
 
   firebase: {
     config: {
-      apiKey: "PRUEBA 2"
+      apiKey: "",
+      authDomain: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: "",
+      appId: ""
     }
   }
 }
