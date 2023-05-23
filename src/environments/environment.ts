@@ -3,7 +3,7 @@ export const environment = {
 
   firebase: {
     config: {
-      apiKey: "PRUEBA"
+      apiKey: "PRUEBA 2"
     }
   }
 }
