@@ -1,0 +1,50 @@
+@import "../../../../styles.scss";
+
+.files-upload {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__header {
+    margin-bottom: 12px;
+  }
+  &__content {
+    flex-grow: 1;
+  }
+  &__footer {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    margin-top: 12px;
+  }
+}
+
+.drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px dashed $primary-ligh-1;
+  border-radius: 4px;
+  padding: 20px;
+
+  &__hovered {
+    border: 2px solid $primary;
+    .drop-zone__label {
+      opacity: 0.3;
+    }
+  }
+}
+
+.file {
+  &__input {
+    display: none;
+  }
+  &__label {
+    color: $primary;
+    &:hover {
+      color: $primary-dark-1;
+      cursor: pointer;
+    }
+  }
+}
