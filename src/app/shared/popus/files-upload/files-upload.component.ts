@@ -56,4 +56,13 @@ export class FilesUploadComponent implements OnInit{
   onUploadComplete(url: string) : void {
     this.fileURLs.push(url)
   }
+
+  onComplete() :void {
+    const resImg = this.data.multiple ? this.fileURLs : this.fileURLs[0]
+    this.dialogRef.close(resImg)
+  }
+
+  onClose() :void {
+    this.dialogRef.close()
+  }
 }

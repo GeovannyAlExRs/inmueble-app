@@ -1,4 +1,4 @@
 <button (click)="onToggleSpinner()">Show Spinner</button>
 <app-spinner *ngIf="showSpinner"></app-spinner>
 
-<button appFilesUpload [multiple]="true">Upload Image</button>
+<button appFilesUpload [multiple]="true" (imgURL)="onFilesChange($event)">Upload Image</button>
