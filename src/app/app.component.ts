@@ -4,9 +4,10 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
+  showSpinner = false;
   title = 'inmueble-app';
 
   constructor(private firebase: AngularFirestore) {}
@@ -16,5 +17,9 @@ export class AppComponent implements OnInit{
       console.log(data.map(users => users.payload.doc.data()))
     })
 
+  }
+
+  onToggleSpinner() : void {
+    this.showSpinner = !this.showSpinner
   }
 }
