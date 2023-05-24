@@ -52,4 +52,8 @@ export class FilesUploadComponent implements OnInit{
     console.log(files);
 
   }
+
+  onUploadComplete(url: string) : void {
+    this.fileURLs.push(url)
+  }
 }

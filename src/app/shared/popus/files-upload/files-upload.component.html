@@ -4,17 +4,23 @@
   </div>
 
   <div class="files-upload__content">
-    <div class="drop-zone" appDropZone (hovered)="toggleHover($event)" [class.drop-zone__hovered]="isHovering" (dropped)="onDrop($event)">
-      <div class="drop-zone__label">Deja tus archivos aqui...!!!</div>
-      <div class="drop-zone__file">
-        <label class="file">
-          <input class="file__input" [multiple]="data.multiple" type="file" (change)="onDropFile($event)">
-          <span class="file__label">Seleccionar...</span>
-        </label>
+    <ng-container *ngIf="!files.length">
+      <div class="drop-zone" appDropZone (hovered)="toggleHover($event)" [class.drop-zone__hovered]="isHovering" (dropped)="onDrop($event)">
+        <div class="drop-zone__label">Deja tus archivos aqui...!!!</div>
+        <div class="drop-zone__file">
+          <label class="file">
+            <input class="file__input" [multiple]="data.multiple" type="file" (change)="onDropFile($event)">
+            <span class="file__label">Seleccionar...</span>
+          </label>
+        </div>
       </div>
-    </div>
 
-    <div class="error" *ngIf="isError">Seleccione un archivo</div>
+      <div class="error" *ngIf="isError">Seleccione un archivo</div>
+    </ng-container>
+
+    <ng-container *ngIf="files">
+      <app-upload *ngFor="let file of files" [file]="file" (completed)="onUploadComplete($event)"></app-upload>
+    </ng-container>
   </div>
 
   <div class="files-upload__footer">
