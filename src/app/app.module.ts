@@ -19,6 +19,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 import { IndicatorsModule } from '@shared/indicators/indicators.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopusModule } from '@shared/popus/popus.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -37,7 +38,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFireAuthModule,
 
     IndicatorsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    PopusModule
   ],
   providers: [],
   bootstrap: [AppComponent]
