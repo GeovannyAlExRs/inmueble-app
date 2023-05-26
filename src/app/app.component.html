@@ -2,3 +2,6 @@
 <app-spinner *ngIf="showSpinner"></app-spinner>
 
 <button appFilesUpload [multiple]="true" (imgURL)="onFilesChange($event)">Upload Image</button>
+
+<button (click)="onSuccess()">SUCCESS</button>
+<button (click)="onError()">ERROR</button>

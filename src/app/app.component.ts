@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { NotificationService } from './services/notification/notification.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ export class AppComponent implements OnInit {
   showSpinner = false;
   title = 'inmueble-app';
 
-  constructor(private firebase: AngularFirestore) {}
+  constructor(private firebase: AngularFirestore, private notificationService: NotificationService) {}
 
   ngOnInit(): void {
     this.firebase.collection("test").stateChanges().subscribe(data => {
@@ -25,5 +26,13 @@ export class AppComponent implements OnInit {
 
   onFilesChange(urls: string | string[]) :void {
     console.log('URLS: ', urls);
+  }
+
+  onSuccess() : void {
+    this.notificationService.success("El procedimiento fue CORRECTO")
+  }
+
+  onError() : void {
+    this.notificationService.error("El procedimiento fue INCORRECTO")
   }
 }

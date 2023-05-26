@@ -20,6 +20,7 @@ import { IndicatorsModule } from '@shared/indicators/indicators.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopusModule } from '@shared/popus/popus.module';
+import { NotificationModule } from './services/notification/notification.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -39,7 +40,8 @@ import { PopusModule } from '@shared/popus/popus.module';
 
     IndicatorsModule,
     BrowserAnimationsModule,
-    PopusModule
+    PopusModule,
+    NotificationModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
