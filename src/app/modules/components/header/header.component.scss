@@ -1,0 +1,17 @@
+.side-bar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-bar li {
+  text-decoration: none;
+  color: #f5f5f9;
+}
+
+.side-bar li:hover, .side-bar li:active {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #a6b1be;
+  transition: 0.5s;
+}
