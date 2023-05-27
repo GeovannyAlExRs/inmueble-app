@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +12,8 @@ export class HeaderComponent implements OnInit {
   } = { defaultOptions: [], accessLink: [] }
 
   customOptions: Array<any> = []
+
+  @Output() menuToggle = new EventEmitter<void>()
 
   constructor() {}
 
@@ -45,5 +47,9 @@ export class HeaderComponent implements OnInit {
         icon: 'uil-heart-medical'
       }
     ]
+  }
+
+  menuToggleDispatch() : void {
+    this.menuToggle.emit()
   }
 }
