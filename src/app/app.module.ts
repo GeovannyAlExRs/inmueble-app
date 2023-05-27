@@ -21,6 +21,8 @@ import { IndicatorsModule } from '@shared/indicators/indicators.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopusModule } from '@shared/popus/popus.module';
 import { NotificationModule } from './services/notification/notification.module';
+
+import { MatSidenavModule } from '@angular/material/sidenav'
 @NgModule({
   declarations: [
     AppComponent
@@ -41,7 +43,9 @@ import { NotificationModule } from './services/notification/notification.module'
     IndicatorsModule,
     BrowserAnimationsModule,
     PopusModule,
-    NotificationModule.forRoot()
+    NotificationModule.forRoot(),
+
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
