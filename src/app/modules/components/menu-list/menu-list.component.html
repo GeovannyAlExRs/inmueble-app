@@ -1,0 +1,19 @@
+<mat-nav-list>
+  <div class="nav-menu">
+    <div class="nav-menu__img">
+      <img class="image" src="../../../../assets/img/lg_inmueble_app.png" alt="">
+    </div>
+
+    <div class="nav-menu__separator"></div>
+
+    <ul class="nav-menu__list">
+      <li *ngFor="let item of menuList.accessLink" mat-list-item (click)="closeMenu()">
+          <div class="list__item">
+              <i [ngClass]="['uil',item.icon]"></i>
+              <span class="navigation-list-label">{{item.name}}</span>
+          </div>
+      </li>
+    </ul>
+
+  </div>
+</mat-nav-list>

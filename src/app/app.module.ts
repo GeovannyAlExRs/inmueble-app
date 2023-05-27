@@ -24,17 +24,20 @@ import { NotificationModule } from './services/notification/notification.module'
 
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatListModule } from '@angular/material/list'
 import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HeaderComponent } from './modules/components/header/header.component'
+import { MenuListComponent } from './modules/components/menu-list/menu-list.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    MenuListComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ import { HeaderComponent } from './modules/components/header/header.component'
 
     MatSidenavModule,
     MatToolbarModule,
+    MatListModule,
     MatIconModule,
     MatButtonModule,
 
