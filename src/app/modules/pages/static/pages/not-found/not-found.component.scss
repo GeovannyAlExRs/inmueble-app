@@ -1,0 +1,36 @@
+@import '../../../../../../styles.scss';
+
+.flex-container, .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container {
+  height: 80vh;
+  padding: $default-0;
+  margin: $default-0;
+  background-image: url(../../../../../../assets/img/bk_404.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.row {
+  width: $percentage-075;
+  height: $percentage-100;
+  padding: $space-25;
+}
+
+mat-card {
+  text-align: center;
+  padding: $space-15 $percentage-010;
+  border: 0px !important;
+  box-shadow: none !important;
+  background-color: rgba(18, 30, 54, 0.03);
+}
+
+.image {
+  width: 50%;
+}
