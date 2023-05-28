@@ -1,14 +1,16 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="toolbar-background">
   <button mat-icon-button (click)="menuToggleDispatch()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>INMBUEBLE APP</span>
+  <div fxLayout class="toolbar-background__img">
+    <img class="image" src="../../../../assets/img/lg_inmueble_app_bn.png" alt="">
+  </div>
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
     <ul fxLayout="row" fxLayoutGap="25px" class="side-bar">
       <li *ngFor="let item of mainMenu.defaultOptions">
           <div class="list-wrapper-item">
               <i [ngClass]="['uil',item.icon]"></i>
-              <span class="side-bar__list list-label">{{item.name}}</span>
+              <span class="list-label">{{item.name}}</span>
           </div>
       </li>
   </ul>

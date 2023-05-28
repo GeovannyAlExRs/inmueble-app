@@ -1,9 +1,14 @@
+@import '../styles.scss';
+
 .mat-sidenav-container, .mat-sidenav-content, .mat-sidenav, .mat-nav-list {
-  height: 100%;
+  height: $percentage-100;
 }
 
 .mat-sidenav {
-  width: 250px;
+  width: $frame-space-250;
+  padding: $space-15;
+  margin: $default-0;
+  background-color: $background-1;
 }
 
 .mat-drawer-container {

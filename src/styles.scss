@@ -2,58 +2,108 @@
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 $primary: #145b8d;
+
 $primary-ligh-1: #20d6d8;
 $primary-ligh-2: #2099d8;
+
 $primary-dark-1: #121e36;
 $primary-dark-2: #120907;
 
-$error: #c5084d;
+$text-primary: #a6b1be;
+$text-dark: #232e40;
 
-:root {
-  --color-1: #20d6d8;
-  --color-2: #2099d8;
-  --color-3: #145b8d;
-  --color-4: #121e36;
-  --color-5: #120907;
-  --color-6: #f5f5f9;
-  --font-size-1: 1rem;
-  --font-size-2: 1.2rem;
-  --font-size-3: 1.8rem;
-  --shadow-1: rgba(0, 0, 0, 0.35) 0px 8px 24px;
-  --shadow-2: rgba(100, 104, 111, 0.2) 0px 7px 29px 0px;
-  --border-radius-1: .25rem;
-  --border-radius-2: .5rem;
-  --font-family-1: 'Ubuntu', sans-serif;
-  --animation-1: 200ms;
-  --bs-body-color: #a6b1be;
-  --bs-body-bg: #f5f5f9;
-  /*
-  .color1 {color: #111e35;}
-  .color2 {color: #244a8a;}
-  .color3 {color: #04f287;}
-  .color4 {color: #5aff80;}
-  .color5 {color: #f4ff91;}
-  */
-}
+$background-white: #FFFFFF;
+$background-1: #fdfdfd;
+$background-2: #f5f5f9;
+$background-btn-default: #fafafa;
+$background-btn-hover-1: #f5f5f9;
+$background-btn-hover-2: #a6b1be;
+
+$error: #c5084d;
+$error-ligh: #f2ccda;
+
+$success: #07c39a;
+$success-ligh: #cdf9ef;
+
+$shadow-1: rgba(0, 0, 0, 0.35) 0px 8px 24px;
+$shadow-2: rgba(100, 104, 111, 0.2) 0px 7px 29px 0px;
+
+$separator-line: #f5f5f9;
+
+$frame-space-400: 400px;
+$frame-space-350: 350px;
+$frame-space-300: 300px;
+$frame-space-250: 250px;
+$frame-space-200: 200px;
+$frame-space-100: 100px;
+$frame-space-050: 50px;
+$frame-space-025: 25px;
+
+$transition-02s: 0.2s;
+$opacity-05: .5;
+$default-0: 0px;
+
+$space-25: 25px;
+$space-20: 20px;
+$space-15: 15px;
+$space-12: 12px;
+$space-10: 10px;
+$space-08: 8px;
+$space-05: 5px;
+
+$percentage-100: 100%;
+$percentage-075: 75%;
+$percentage-050: 50%;
+$percentage-030: 30%;
+$percentage-025: 25%;
+$percentage-010: 10%;
+$percentage-005: 5%;
+
+$font-size-22: 22px;
+$font-size-20: 20px;
+$font-size-18: 18px;
+$font-size-16: 16px;
+$font-size-14: 14px;
+$font-size-12: 12px;
+$font-size-10: 10px;
+$font-size-08: 8px;
+
+$font-family-ubuntu: 'Ubuntu', sans-serif;
+
+$animation-2s: 200ms;
+
+$color01: #0e325b;
+$color02: #ca7c14;
+$color03: #f5b017;
+$color04: #3090ac;
+$color05: #f2f2f2;
+$color06: #A6232E40;
+$color07: #66232E40;
+$color08: #c9c6cc;
+$color09: #232e40;
+$color10: #3072b8;
+$color12: #d1e8eb;
+$color13: #03DAC5;
+$color14: #F4F7F7;
+$color15: #fafafa;
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-6);
-  font-family: var(--font-family-1);
-  font-size: var(--font-size-1);
-  color: var(--color-4);
+  margin: $default-0;
+  padding: default-0;
+  background-color: $background-2;
+  font-family: $font-family-ubuntu;
+
 }
 
 input,
 button {
   cursor: pointer;
-  font-family: var(--font-family-1);
+  font-family: $font-size-14;
 }
 
 button:disabled {
-  opacity: .5;
+  opacity: $opacity-05;
 }
 
 *,

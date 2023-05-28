@@ -25,15 +25,19 @@ export class HeaderComponent implements OnInit {
         router: ['/']
       },
       {
-        name: 'Registrar',
-        icon: 'uil uil-search',
-        router: ['/', 'history']
+        name: 'Register',
+        icon: 'uil uil-user-square',
+        router: ['/', 'register']
       },
       {
-        name: 'Login',
-        icon: 'uil uil-chart',
-        router: ['/', 'favorites'],
-        query: { hola: 'mundo' }
+        name: 'Product',
+        icon: 'uil uil-box',
+        router: ['/', 'product']
+      },
+      {
+        name: 'Contact',
+        icon: 'uil uil-envelopes',
+        router: ['/', 'contact']
       }
     ]
 
