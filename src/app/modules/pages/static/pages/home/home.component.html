@@ -1,1 +1,27 @@
-<p>home works!</p>
+<section class="flex-container">
+  <div class="row">
+    <mat-card fxFlex fxLayout fxLayoutAlign="center">
+
+      <mat-card-header>
+        <div class="card-img">
+          <img class="image" src="../../../../../../assets/img/logo_inmueble.png" alt="">
+        </div>
+      </mat-card-header>
+
+      <mat-card-title>Bienvenido a Inmueble App EC</mat-card-title>
+      <mat-card-subtitle>Desarrollo profesional de Apps</mat-card-subtitle>
+      <mat-card-content>
+        <p>Aplicacion web de inmueble, desarrollado con tecnologias: Angular, TypeScript (Front-end), Micro services Java con Spring (Back-end) y FireStore and FireStorage</p>
+        <br>
+        <mat-card-footer fxFlex fxLayout fxLayoutAlign="center">
+          <a  href="{{item.link}}" *ngFor="let item of menulink.accessLink" class="card-footer__btn" target="_blank">
+            <span class="btn-inner--icon">
+              <i [ngClass]="['uil',item.icon]"></i>
+            </span>
+          </a>
+        </mat-card-footer>
+      </mat-card-content>
+
+    </mat-card>
+  </div>
+</section>
