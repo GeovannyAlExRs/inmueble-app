@@ -22,12 +22,12 @@ export class HeaderComponent implements OnInit {
       {
         name: 'Home',
         icon: 'uil uil-estate',
-        router: ['/']
+        router: ['/static/home']
       },
       {
         name: 'Register',
         icon: 'uil uil-user-square',
-        router: ['/', 'register']
+        router: ['/auth/register']
       },
       {
         name: 'Product',

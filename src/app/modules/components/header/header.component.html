@@ -7,7 +7,7 @@
   </div>
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
     <ul fxLayout="row" fxLayoutGap="25px" class="side-bar">
-      <li *ngFor="let item of mainMenu.defaultOptions">
+      <li [routerLink]="item.router" [queryParams]="item.query" *ngFor="let item of mainMenu.defaultOptions">
           <div class="list-wrapper-item">
               <i [ngClass]="['uil',item.icon]"></i>
               <span class="list-label">{{item.name}}</span>

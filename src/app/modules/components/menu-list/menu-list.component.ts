@@ -18,32 +18,32 @@ export class MenuListComponent implements OnInit {
       {
         name: 'Home',
         icon: 'uil uil-estate',
-        router: ['/']
+        router: ['/static/home']
       },
       {
         name: 'Sign in',
         icon: 'uil uil-signin',
-        router: ['/', 'login']
+        router: ['/auth/login']
       },
       {
         name: 'Sign up',
         icon: 'uil uil-user-square',
-        router: ['/', 'register']
+        router: ['/auth/register']
       },
       {
         name: 'New Product',
         icon: 'uil uil-box',
-        router: ['/', 'product']
+        router: ['/product']
       },
       {
         name: 'Contact',
         icon: 'uil uil-envelopes',
-        router: ['/', 'contact']
+        router: ['/contact']
       },
       {
         name: 'Sign out',
         icon: 'uil uil-signout',
-        router: ['/', 'login']
+        router: ['/auth/login']
       }
     ]
   }
