@@ -1,1 +1,70 @@
-<p>register works!</p>
+<div fxLayoutAlign="center" class="container-form-login">
+  <section fxLayoutAlign="center">
+    <mat-card>
+
+      <mat-card-header>
+        <div class="card-img">
+          <img class="image" src="../../../../../../assets/img/logo_inmueble.png" alt="">
+        </div>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-card-title>REGISTER</mat-card-title>
+        <mat-card-subtitle>¡Hola, Bienvenido a Inmueble APP EC 👋</mat-card-subtitle>
+      </mat-card-content>
+
+      <form fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="registerUser(f)">
+
+        <div fxFlex="50">
+          <mat-form-field appearance="outline">
+            <mat-label>Nombres</mat-label>
+            <input type="text" matInput name="firtsName" ngModel required placeholder="Firts Name...">
+            <mat-error>Campo obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Apellidos</mat-label>
+            <input type="text" matInput name="lastName" ngModel required placeholder="Last Name...">
+            <mat-error>Campo obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Nombre de usuario</mat-label>
+            <input type="text" matInput name="userName" ngModel required placeholder="User Name...">
+            <mat-error>Campo obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Num. Celular</mat-label>
+            <input type="text" matInput name="phone" ngModel required placeholder="+593 90 000 0000">
+            <mat-error>Campo obligatorio</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="50">
+          <mat-form-field appearance="outline">
+            <mat-label>Correo</mat-label>
+            <input type="email" matInput name="email" ngModel required placeholder="example@inmueble.ec">
+            <mat-error>Campo obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" matInput name="password" ngModel required minlength="8" placeholder=" ●●●●●●●●●●">
+            <mat-error>Contraseña es inferior a 8 caracteres</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Confirmar Contraseña</mat-label>
+            <input type="password" matInput name="passwordConfirme" ngModel minlength="8" required placeholder=" ●●●●●●●●●●">
+            <mat-error>Contraseña es inferior a 8 caracteres</mat-error>
+          </mat-form-field>
+
+          <button mat-raised-button type="submit" class="btn-sign-up">SAVE</button>
+        </div>
+
+      </form>
+
+    </mat-card>
+  </section>
+</div>
