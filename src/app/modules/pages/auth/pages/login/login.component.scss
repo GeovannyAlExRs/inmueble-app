@@ -1,0 +1,56 @@
+@import '../../../../../../styles.scss';
+
+.container-form-login, .card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-form-login {
+  height: 80vh;
+  & section{
+    width: $percentage-030;
+  }
+}
+
+mat-card {
+  padding: $space-05 $space-25;
+  width: $percentage-100;
+  text-align: center;
+  box-shadow: $shadow-2 !important;
+  border-radius: $space-10 !important;
+  & form {
+    padding: $space-12;
+  }
+  & mat-card-title {
+    color: $primary;
+    font-size: $font-size-22;
+    letter-spacing: $space-12;
+  }
+  & .btn-sign-in, .btn-sign-up {
+    width: $percentage-100;
+    box-shadow: none;
+  }
+  & .btn-sign-in{
+    background-color: $primary-ligh-2;
+    color: $background-white;
+  }
+  & .btn-sign-in:hover, .btn-sign-in:active {
+    background-color: $primary;
+    color: $background-btn-hover-1;
+    font-weight: bold;
+  }
+  & .btn-sign-up{
+    background-color: $background-btn-hover-1;
+    color: $primary;
+  }
+}
+
+.image {
+  width: $percentage-025;
+  margin: $default-0;
+}
+
+mat-form-field {
+  width: 100%;
+}

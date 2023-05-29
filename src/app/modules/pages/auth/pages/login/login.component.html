@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="container-form-login">
+  <section fxLayoutAlign="center">
+    <mat-card>
+
+      <mat-card-header>
+        <div class="card-img">
+          <img class="image" src="../../../../../../assets/img/logo_inmueble.png" alt="">
+        </div>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-card-title>LOGIN</mat-card-title>
+        <mat-card-subtitle>¡Hola, Bienvenido a Inmueble APP EC 👋</mat-card-subtitle>
+      </mat-card-content>
+
+      <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="loginUser(f)">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Correo</mat-label>
+          <input type="email" matInput name="email" ngModel required placeholder="example@inmueble.ec">
+          <mat-error>Debe ingresar un correo</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input type="password" matInput name="password" ngModel required placeholder=" ●●●●●●●●●●">
+          <mat-error>Debe ingresar una contraseña valida</mat-error>
+        </mat-form-field>
+        <button mat-raised-button type="submit" class="btn-sign-in">SIGN IN</button>
+        <button mat-raised-button type="button" class="btn-sign-up">REGISTER</button>
+
+      </form>
+
+    </mat-card>
+  </section>
+</div>
