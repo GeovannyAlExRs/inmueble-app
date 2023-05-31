@@ -10,6 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterComponent } from './register.component';
+import { SpinnerModule } from '@shared/indicators/spinner/spinner.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { RegisterComponent } from './register.component';
     MatButtonModule,
     FormsModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SpinnerModule
   ]
 })
 export class RegisterModule { }

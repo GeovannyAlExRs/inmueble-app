@@ -10,6 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
+import { SpinnerModule } from '@shared/indicators/spinner/spinner.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LoginComponent } from './login.component';
     MatButtonModule,
     FormsModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SpinnerModule
   ]
 })
 export class LoginModule { }
