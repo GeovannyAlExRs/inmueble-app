@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { environment } from '../environments/environment';
+import { environment } from '@env/environment';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
@@ -32,6 +32,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HeaderComponent } from './modules/components/header/header.component'
 import { MenuListComponent } from './modules/components/menu-list/menu-list.component'
+
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
+
+import { effects, reducers } from '@store/store';
+import { HttpClientModule } from '@angular/common/http';
+
+const StoreDevTools = !environment.production ? StoreDevtoolsModule.instrument({maxAge: 50}) : [];
 
 @NgModule({
   declarations: [
@@ -63,7 +72,14 @@ import { MenuListComponent } from './modules/components/menu-list/menu-list.comp
     MatIconModule,
     MatButtonModule,
 
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+
+    StoreDevTools,
+    StoreModule.forRoot(reducers, {
+      runtimeChecks: { strictActionImmutability: true, strictStateImmutability: true }
+    }),
+    EffectsModule.forRoot(effects)
   ],
   providers: [],
   bootstrap: [AppComponent]
