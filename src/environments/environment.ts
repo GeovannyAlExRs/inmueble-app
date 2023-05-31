@@ -16,5 +16,7 @@ export const environment = {
       messagingSenderId: "",
       appId: ""*/
     }
-  }
+  },
+
+  url: "http://localhost:8086/"
 }
