@@ -1,4 +1,5 @@
 <div fxLayoutAlign="center" class="container-form-login">
+  <app-spinner *ngIf="logind$ | async"></app-spinner>
   <section fxLayoutAlign="center">
     <mat-card>
 
@@ -18,19 +19,19 @@
         <div fxFlex="50">
           <mat-form-field appearance="outline">
             <mat-label>Nombres</mat-label>
-            <input type="text" matInput name="firtsName" ngModel required placeholder="Firts Name...">
+            <input type="text" matInput name="firstname" ngModel required placeholder="Firts Name...">
             <mat-error>Campo obligatorio</mat-error>
           </mat-form-field>
 
           <mat-form-field appearance="outline">
             <mat-label>Apellidos</mat-label>
-            <input type="text" matInput name="lastName" ngModel required placeholder="Last Name...">
+            <input type="text" matInput name="lastname" ngModel required placeholder="Last Name...">
             <mat-error>Campo obligatorio</mat-error>
           </mat-form-field>
 
           <mat-form-field appearance="outline">
             <mat-label>Nombre de usuario</mat-label>
-            <input type="text" matInput name="userName" ngModel required placeholder="User Name...">
+            <input type="text" matInput name="username" ngModel required placeholder="User Name...">
             <mat-error>Campo obligatorio</mat-error>
           </mat-form-field>
 
