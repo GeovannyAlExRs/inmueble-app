@@ -23,10 +23,7 @@ export class InjectionSessionInterceptor implements HttpInterceptor {
       const newRequest = request.clone({
         setHeaders: { authorization: `Bearer ${token}` }
       })
-
-      console.log('TOKEN Interceptor: ', newRequest);
-
-
+      //console.log('TOKEN Interceptor: ', newRequest);
       return next.handle(newRequest)
     } catch (error) {
       console.log('Error ', error)
