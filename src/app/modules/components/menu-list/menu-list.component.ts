@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { UsersResponse } from '@store/users/users.store.interfaces';
 
 @Component({
   selector: 'app-menu-list',
@@ -7,49 +8,34 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class MenuListComponent implements OnInit {
 
-  @Output() menuToggleList = new EventEmitter<void>()
+  menuList: { accessLink: Array<any> } = { accessLink: [] }
 
-  menuList: { defaultOptions: Array<any>, accessLink: Array<any> } = { defaultOptions: [], accessLink: [] }
+  @Output() menuToggle = new EventEmitter<void>()
+  @Output() signOut = new EventEmitter<void>()
+  @Input() isAuthorized!: boolean | null
+  @Input() users!: UsersResponse | null
 
   constructor() {}
 
   ngOnInit(): void {
     this.menuList.accessLink = [
-      {
-        name: 'Home',
-        icon: 'uil uil-estate',
-        router: ['/static/home']
-      },
-      {
-        name: 'Sign in',
-        icon: 'uil uil-signin',
-        router: ['/auth/login']
-      },
-      {
-        name: 'Sign up',
-        icon: 'uil uil-user-square',
-        router: ['/auth/register']
-      },
-      {
-        name: 'New Product',
-        icon: 'uil uil-box',
-        router: ['/product']
-      },
-      {
-        name: 'Contact',
-        icon: 'uil uil-envelopes',
-        router: ['/contact']
-      },
-      {
-        name: 'Sign out',
-        icon: 'uil uil-signout',
-        router: ['/auth/login']
-      }
+      { name: 'Home', icon: 'uil uil-estate', router: ['/static/home'], band: !this.isAuthorized },
+      { name: 'Sign in', icon: 'uil uil-signin', router: ['/auth/login'], band: this.isAuthorized },
+      { name: 'Sign up', icon: 'uil uil-user-square', router: ['/auth/register'], band: this.isAuthorized },
+      { name: 'New Product', icon: 'uil uil-box', router: ['/product'], band: !this.isAuthorized },
+      { name: 'Contact', icon: 'uil uil-envelopes', router: ['/contact'] },
+      { name: 'Sign out', icon: 'uil uil-signout', router: ['/auth/login'], band: !this.isAuthorized }
     ]
   }
 
   closeMenu() :void {
-    this.menuToggleList.emit()
+    this.menuToggle.emit()
   }
 
+  logoutUser(menu: string): void {
+    if(menu === 'Sign out') {
+      this.signOut.emit()
+      //console.log('Menu: SOY', menu)
+    }
+  }
 }
