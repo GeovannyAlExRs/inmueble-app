@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { EmailPasswordCredentials, UserRequest, UsersResponse } from '@store/users/users.store.interfaces';
+import { EmailPasswordCredentials, UserCreateRequest, UserRequest, UsersResponse } from '@store/users/users.store.interfaces';
 
 export enum Types {
   INIT = '[User] Init: Start',
@@ -15,7 +15,7 @@ export enum Types {
   SIGN_UP_EMAIL_SUCCESS = '[User] Register: Success',
   SIGN_UP_EMAIL_ERROR = '[User] Register: Error',
 
-  SIGN_OUT_EMAIL = '[User] Register: Logout',
+  SIGN_OUT_EMAIL = '[User] Logout: Start',
   SIGN_OUT_EMAIL_SUCCESS = '[User] Logout: Success',
   SIGN_OUT_EMAIL_ERROR = '[User] Logout: Error',
 }
@@ -28,7 +28,7 @@ export class Init implements Action {
 
 export class InitAuthorized implements Action {
   readonly type = Types.INIT_AUTHORIZED;
-  constructor(public email: string, public userResponse: UsersResponse | null) {}
+  constructor(public email: string, public user: UsersResponse | null) {}
 }
 
 export class InitUnAuthorized implements Action {
@@ -49,7 +49,7 @@ export class SignInEmail implements Action {
 
 export class SignInEmailSuccess implements Action {
   readonly type = Types.SIGN_IN_EMAIL_SUCCESS;
-  constructor(public email: string, public userResponse: UsersResponse | null) {}
+  constructor(public email: string, public user: UsersResponse | null) {}
 }
 
 export class SignInEmailError implements Action {
@@ -60,12 +60,12 @@ export class SignInEmailError implements Action {
 // USER REGISTER
 export class SignUpEmail implements Action {
   readonly type = Types.SIGN_UP_EMAIL;
-  constructor(public userRequest: UserRequest) {}
+  constructor(public user: UserCreateRequest) {}
 }
 
 export class SignUpEmailSuccess implements Action {
   readonly type = Types.SIGN_UP_EMAIL_SUCCESS;
-  constructor(public email: string, public userResponse: UsersResponse | null) {}
+  constructor(public email: string, public user: UsersResponse | null) {}
 }
 
 export class SignUpEmailError implements Action {
@@ -80,7 +80,7 @@ export class SignOutEmail implements Action {
 }
 
 export class SignOutEmailSuccess implements Action {
-  readonly type = Types.SIGN_OUT_EMAIL_SUCCESS;
+  readonly type = Types.SIGN_OUT_EMAIL;
   constructor() {}
 }
 
