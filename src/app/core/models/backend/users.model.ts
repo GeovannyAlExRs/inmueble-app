@@ -1,12 +1,12 @@
 export interface Users {
 
-  id?: number | string;
+  id: number | string;
   firstname: string;
   lastname: string;
   username: string;
   phone: string;
   email: string;
-  token?: string;
+  token: string;
 
   /*
   firstName: string;
