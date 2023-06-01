@@ -38,7 +38,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
 
 import { effects, reducers } from '@store/store';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { InjectionSessionInterceptor } from '@core/interceptors/injection-session.interceptor';
 
 const StoreDevTools = !environment.production ? StoreDevtoolsModule.instrument({maxAge: 50}) : [];
 
@@ -81,7 +82,9 @@ const StoreDevTools = !environment.production ? StoreDevtoolsModule.instrument({
     }),
     EffectsModule.forRoot(effects)
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: InjectionSessionInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
