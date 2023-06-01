@@ -26,7 +26,7 @@ export class UserEffects {
   signUpEmail: Observable<Action> = createEffect(() =>
   this.actions.pipe(
     ofType(fromActions.Types.SIGN_UP_EMAIL), // Define excuse of the transaction
-    map((action: fromActions.SignUpEmail) => action.userRequest), // Map from Backend User
+    map((action: fromActions.SignUpEmail) => action.user), // Map from Backend User
     switchMap( userData =>
       this.httpclient.post<UsersResponse>(`${environment.url}api/authentication/sign-up`, userData) // invoce la URL
       .pipe(
