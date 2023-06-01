@@ -19,12 +19,12 @@
 }
 
 .side-bar {
-  list-style: none;
   padding: $default-0;
   margin: $default-0;
   width: $percentage-050;
 
   & li {
+    list-style: none;
     font-size: $font-size-20;
     text-decoration: none;
     color: $background-2;

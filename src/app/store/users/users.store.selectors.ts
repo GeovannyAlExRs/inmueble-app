@@ -9,8 +9,6 @@ export const getUser = createSelector (
   getUserState, (state) => state.entity
 )
 
-console.log('GET USER: ', getUser)
-
 // Get state loading
 export const getLoading = createSelector(
   getUserState, (state) => state.loading
