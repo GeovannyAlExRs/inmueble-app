@@ -71,7 +71,7 @@ export class UserEffects {
     switchMap( async () => localStorage.getItem('token')), // Get Token
     switchMap( token => {
       if(token) {
-        return this.httpclient.get<UsersResponse>(`${environment.url}api/user`) // invoce la URL
+        return this.httpclient.get<UsersResponse>(`${environment.url}api/users`) // invoce la URL
         .pipe(
           tap((response: UsersResponse) => {
             console.log('BACKEND => DATA USER: ', response);
