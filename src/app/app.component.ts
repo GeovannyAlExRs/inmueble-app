@@ -34,9 +34,7 @@ export class AppComponent implements OnInit {
     this.users$ = this.store.pipe(select(getUser)) as Observable<UsersResponse>
     this.isAuthorized$ = this.store.pipe(select(getIsAuthorized)) as Observable<boolean>
 
-    console.log('USER: ', this.users$);
-
-    //this.store.dispatch(new Init())
+    this.store.dispatch(new Init())
   }
 
   onToggleSpinner() : void {
