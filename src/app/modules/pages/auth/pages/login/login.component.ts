@@ -13,7 +13,7 @@ import { SignInEmail } from '@store/users/users.store.actions'
 })
 export class LoginComponent implements OnInit {
 
-  logind$!: Observable<boolean | null>
+  loading$!: Observable<boolean | null>
 
   constructor(private store: Store<fromRoot.State>) {}
 
@@ -28,5 +28,6 @@ export class LoginComponent implements OnInit {
     }
 
     this.store.dispatch(new SignInEmail(userLoginRequest))
+    console.log("STORE: ", this.store);
   }
 }
