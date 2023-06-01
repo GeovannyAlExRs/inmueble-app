@@ -1,10 +1,18 @@
 <mat-sidenav-container>
   <mat-sidenav #menu>
-    <app-menu-list (menuToggleList)="menu.toggle()"></app-menu-list>
+    <app-menu-list
+                (menuToggle)="menu.toggle()"
+                [isAuthorized]="isAuthorized$ | async"
+                [users]="users$ | async"
+                (signOut)="logoutUser()"></app-menu-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <app-header (menuToggle)="menu.toggle()"></app-header>
+    <app-header
+                (menuToggle)="menu.toggle()"
+                [isAuthorized]="isAuthorized$ | async"
+                [users]="users$ | async"
+                (signOut)="logoutUser()"></app-header>
     <main>
       <router-outlet></router-outlet>
     </main>
