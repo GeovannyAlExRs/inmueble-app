@@ -9,6 +9,8 @@ export const getUser = createSelector (
   getUserState, (state) => state.entity
 )
 
+console.log('GET USER: ', getUser)
+
 // Get state loading
 export const getLoading = createSelector(
   getUserState, (state) => state.loading
@@ -16,5 +18,5 @@ export const getLoading = createSelector(
 
 // if user is authorized (exist in DB)
 export const getIsAuthorized = createSelector(
-  getUserState, (state) => state.email
+  getUserState, (state) => !!state.email
 )
