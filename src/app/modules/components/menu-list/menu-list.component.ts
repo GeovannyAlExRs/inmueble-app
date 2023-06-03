@@ -22,7 +22,8 @@ export class MenuListComponent implements OnInit {
       { name: 'Home', icon: 'uil uil-estate', router: ['/static/home'], band: !this.isAuthorized },
       { name: 'Sign in', icon: 'uil uil-signin', router: ['/auth/login'], band: this.isAuthorized },
       { name: 'Sign up', icon: 'uil uil-user-square', router: ['/auth/register'], band: this.isAuthorized },
-      { name: 'New Product', icon: 'uil uil-box', router: ['/product'], band: !this.isAuthorized },
+      { name: 'New Inmueble', icon: 'uil uil-box', router: ['/inmueble/new'], band: !this.isAuthorized },
+      { name: 'List Inmueble', icon: 'uil uil-box', router: ['/inmueble/list'], band: !this.isAuthorized },
       { name: 'Contact', icon: 'uil uil-envelopes', router: ['/contact'] },
       { name: 'Sign out', icon: 'uil uil-signout', router: ['/auth/login'], band: !this.isAuthorized }
     ]
