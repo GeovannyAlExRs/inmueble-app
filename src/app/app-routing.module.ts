@@ -7,6 +7,7 @@ const routes: Routes = [
     children: [
       { path: 'auth', loadChildren: () => import('@modules/pages/auth/auth.module').then(m=>m.AuthModule) },
       { path: 'static', loadChildren: () => import('@modules/pages/static/static.module').then(m=>m.StaticModule) },
+      { path: 'inmueble', loadChildren: () => import('@modules/pages/inmueble/inmueble.module').then(m=>m.InmuebleModule) },
       { path: '', pathMatch:'full', redirectTo: 'static/home' }
     ]
   },
