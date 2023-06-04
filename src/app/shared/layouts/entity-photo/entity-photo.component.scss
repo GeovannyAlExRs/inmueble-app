@@ -1,0 +1,11 @@
+@import '../../../../styles.scss';
+
+.layout-content {
+  &__photo {
+    width: $percentage-075;
+    height: $percentage-075;
+    border-radius: $percentage-050;
+    background: $primary-ligh-2;
+    background-size: cover;
+  }
+}
