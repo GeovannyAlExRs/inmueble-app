@@ -10,6 +10,9 @@ import { EntityPhotoComponent } from './entity-photo.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    EntityPhotoComponent
   ]
 })
 export class EntityPhotoModule { }
