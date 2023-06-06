@@ -1,1 +1,40 @@
-<p>inmueble-form works!</p>
+<section fxLayout="column" fxLayoutAlign="center" class="inmbueble">
+  <app-spinner *ngIf="loading$ | async"></app-spinner>
+  <mat-toolbar color="secondary"><span>Registrar nuevo inmbueble</span></mat-toolbar>
+  <mat-card>
+    <form fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center start" #f="ngForm" (ngSubmit)="saveInmueble(f)">
+
+      <div class="inmbueble-form">
+        <div class="inmbueble-form__photo" fxLayout="column" fxLayoutAlign="center center">
+          <app-entity-photo class="inmbueble-form__photo__img" [photoURL]="photoLoaded"></app-entity-photo>
+          <button class="btn-upload" mat-button appFilesUpload (imgURL)="onFilesImg($event)">
+            <i class="uil uil-upload"></i>
+            Upload
+          </button>
+        </div>
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="center center" class="inmbueble-form form-input">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input type="text" matInput name="name" ngModel required placeholder="Inmueble ABC">
+          <mat-error>Campo obligatorio</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Direccion</mat-label>
+          <input type="text" matInput name="address" ngModel required placeholder="Lugar, Av - Calle">
+          <mat-error>Campo obligatorio</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Precio</mat-label>
+          <input type="text" matInput name="price" ngModel required placeholder="$ 000,00">
+          <mat-error>Campo obligatorio</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" [disabled]="f.invalid" class="btn-save">SAVE</button>
+      </div>
+    </form>
+  </mat-card>
+</section>

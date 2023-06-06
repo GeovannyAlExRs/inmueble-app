@@ -2,10 +2,12 @@
 
 .layout-content {
   &__photo {
-    width: $percentage-075;
-    height: $percentage-075;
-    border-radius: $percentage-050;
-    background: $primary-ligh-2;
+    width: $percentage-100;
+    height: 50vh;
+    background-image: url(../../../../assets/img/scan.png);
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
+    padding: $space-08;
   }
 }

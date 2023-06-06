@@ -1,0 +1,63 @@
+@import '../../../../../styles.scss';
+
+.inmbueble {
+  padding: $space-20;
+  height: 80vh;
+
+  & mat-toolbar {
+    margin: $space-05 auto;
+    border-radius: $space-08;
+  }
+
+  & mat-card {
+    margin: $space-05 auto;
+    width: $percentage-100;
+    padding: $space-15;
+  }
+}
+
+.inmbueble-form {
+  width: $percentage-100;
+
+  &__photo {
+    width: $percentage-100;
+    padding: $space-15;
+
+    &__img {
+      width: $percentage-050;
+    }
+  }
+}
+
+.form-input {
+  padding: $space-05;
+  & mat-form-field, button {
+    width: $percentage-075;
+  }
+
+  & .btn-save {
+    width: $percentage-025;
+    box-shadow: none;
+    background-color: $primary-ligh-2;
+    color: $background-white;
+  }
+  & .btn-save:hover, .btn-save:active {
+    background-color: $primary;
+    color: $background-btn-hover-1;
+    font-weight: bold;
+  }
+}
+
+.btn-upload{
+  width: $percentage-050;
+  box-shadow: none;
+  background-color: $background-btn-hover-1;
+  color: $primary;
+  margin-top: $space-10;
+
+}
+.btn-upload:hover, .btn-upload:active {
+  background-color: primary-ligh-1;
+  color: $primary;
+  font-weight: bold;
+}
