@@ -17,15 +17,16 @@ type Action = fromActions.All
 @Injectable()
 export class SaveEffects {
 
-  constructor(private actions: Actions, private httpclient: HttpClient,
+  constructor(private actions: Actions, private httpClient: HttpClient,
               private notification: NotificationService, private router: Router) {}
 
+  // TODO: Register new Inmueble...
   create: Observable<Action> = createEffect(() =>
     this.actions.pipe(
       ofType(fromActions.Types.CREATE),
       map((action: fromActions.Create) => action.inmueble),
       switchMap((request: InmuebleCreateRequest) =>
-        this.httpclient.post<InmuebleResponse>(`${environment.url}gateway/inmueble`, request)
+        this.httpClient.post<InmuebleResponse>(`${environment.url}gateway/inmueble`, request)
         .pipe(
           delay(1000),
           tap((response: InmuebleResponse) => {
@@ -36,6 +37,21 @@ export class SaveEffects {
             this.notification.error(`ERROR, No se pudo guardar el inmueble: ${err.message}`)
             return of(new fromActions.CreateError(err.message))
           })
+        )
+      )
+    )
+  )
+
+  // TODO: Read new Inmueble...
+  read: Observable<Action> = createEffect(() =>
+    this.actions.pipe(
+      ofType(fromActions.Types.READ),
+      switchMap(() =>
+        this.httpClient.get<InmuebleResponse[]>(`${environment.url}gateway/inmueble`)
+        .pipe(
+          delay(2000),
+          map((inmuebles: InmuebleResponse[]) => new fromActions.ReadSuccess(inmuebles)),
+          catchError(err => of(new fromActions.ReadError(err.message)))
         )
       )
     )
