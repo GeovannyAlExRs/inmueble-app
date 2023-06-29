@@ -18,5 +18,5 @@ export const environment = {
     }
   },
 
-  url: "http://localhost:8086/"
+  url: "https://microservices-api-gateway.onrender.com/"
 }
