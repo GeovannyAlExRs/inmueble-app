@@ -1,0 +1,26 @@
+@import '../../../../styles.scss';
+
+.search-component {
+  max-width: $frame-space-400;
+  padding: $default-0 $space-15 $default-0 $default-0;
+  gap: $space-05;
+  flex-grow: 1;
+
+  & input {
+    font-size: $font-size-18;
+    width: $percentage-100;
+    height: $frame-space-025;
+    padding: $space-15;
+
+    background-color: $background-1;
+    color:$primary;
+
+    border-radius: $frame-space-050;
+    border: $default-0;
+  }
+
+  & input:focus {
+    outline: unset;
+    border: 1px solid $background-btn-hover-2;
+  }
+}
