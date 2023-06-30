@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EntityPhotoModule } from './entity-photo/entity-photo.module';
+import { SearchModule } from './search/search.module';
 
 
 
@@ -8,10 +9,12 @@ import { EntityPhotoModule } from './entity-photo/entity-photo.module';
   declarations: [],
   imports: [
     CommonModule,
-    EntityPhotoModule
+    EntityPhotoModule,
+    SearchModule
   ],
   exports: [
-    EntityPhotoModule
+    EntityPhotoModule,
+    SearchModule
   ]
 })
 export class LayoutsModule { }
