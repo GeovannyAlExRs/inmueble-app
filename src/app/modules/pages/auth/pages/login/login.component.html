@@ -27,7 +27,7 @@
           <input type="password" matInput name="password" ngModel required placeholder=" ●●●●●●●●●●">
           <mat-error>Debe ingresar una contraseña valida</mat-error>
         </mat-form-field>
-        <button mat-raised-button type="submit" class="btn-sign-in">SIGN IN</button>
+        <button mat-raised-button [disabled]="f.invalid" type="submit" class="btn-sign-in">SIGN IN</button>
         <button mat-raised-button type="button" class="btn-sign-up">REGISTER</button>
 
       </form>

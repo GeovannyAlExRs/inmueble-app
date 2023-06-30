@@ -61,7 +61,7 @@
             <mat-error>Contraseña es inferior a 8 caracteres</mat-error>
           </mat-form-field>
 
-          <button mat-raised-button type="submit" class="btn-sign-up">SAVE</button>
+          <button mat-raised-button [disabled]="f.invalid" type="submit" class="btn-sign-up">SAVE</button>
         </div>
 
       </form>
