@@ -8,7 +8,7 @@
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
     <ul fxLayout="row" fxLayoutGap="25px" class="side-bar">
       <li><a>{{ users ? users.username : null }}</a></li>
-      <li [routerLink]="item.router" [queryParams]="item.query" *ngFor="let item of mainMenu.defaultOptions" mat-list-item>
+      <li fxHide.sm [routerLink]="item.router" [queryParams]="item.query" *ngFor="let item of mainMenu.defaultOptions" mat-list-item>
           <a (click)="logoutUser(item.name)" *ngIf="users? item.band : !item.band" class="list-wrapper-item">
               <i [ngClass]="['uil',item.icon]"></i>
               <span class="list-label">{{item.name}}</span>
