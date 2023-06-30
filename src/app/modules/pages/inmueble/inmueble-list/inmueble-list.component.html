@@ -1,1 +1,33 @@
-<p>inmueble-list works!</p>
+<app-spinner *ngIf="loading$ | async"></app-spinner>
+<!--pre>{{ inmuebles$ | async | json }}</pre-->
+
+<mat-toolbar color="secondary">
+  <span fxHide.sm fxHide.xs class="title">Lista de inmbuebles</span>
+  <app-search (callbackData)="receiveData($event)"></app-search>
+  <mat-card-actions fxLayoutAlign="end center">
+    <button mat-button routerLink="/inmueble/new" class="btn btn-new"> <i class="uil uil-plus-circle"></i>Nuevo</button>
+  </mat-card-actions>
+
+</mat-toolbar>
+
+<section class="inmbueble">
+  <ul class="cards" *ngIf="inmuebles$ | async as inmuebles">
+    <li class="cards__item" *ngFor="let inmueble of inmuebles | search:searchInmueble">
+      <mat-card class="cards__item__sub-card">
+        <mat-card-header>
+          <mat-card-title>{{inmueble.name}}</mat-card-title>
+          <mat-card-subtitle>Precio: <span>$ {{inmueble.price}}</span></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image appImgBroken [src]="inmueble.photo" alt="{{inmueble.name}}">
+        <mat-card-content>
+          <p>Direccion: {{inmueble.address}}</p>
+        </mat-card-content>
+        <mat-card-actions fxLayoutAlign="end center">
+          <button mat-button class="btn"> <i class="uil uil-eye"></i>Ver</button>
+          <button mat-button class="btn btn-shop"> <i class="uil uil-shopping-cart"></i>Comprar</button>
+        </mat-card-actions>
+      </mat-card>
+    </li>
+  </ul>
+
+</section>

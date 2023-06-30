@@ -1,0 +1,63 @@
+@import '../../../../../styles.scss';
+
+.inmbueble {
+  display: flex;
+  padding: $default-0;
+  height: 70vh;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: $default-0;
+  padding: $default-0;
+
+  &__item {
+    display: flex;
+    padding: $space-15;
+    gap: $space-15;
+    flex-grow: 1;
+
+    &__sub-card {
+      max-width: $frame-space-300;
+    }
+  }
+}
+
+.title {
+  padding-right: $space-20;
+}
+
+mat-card img {
+  object-fit: cover;
+  width: $percentage-100;
+}
+
+mat-card-subtitle span {
+  font-size: $font-size-18;
+  color: $success;
+}
+
+mat-card-actions button {
+  width: $frame-space-100;
+  margin-left: $space-08;
+}
+
+mat-card-actions {
+
+  & .btn{
+    background: $background-btn-hover-1;
+  }
+  & .btn i{
+    padding-right: $space-05;
+  }
+  & .btn-new{
+    background: $background-white;
+  }
+  & .btn-shop:hover, .btn-shop:active, .btn-new:hover, .btn-new:active{
+    background: $primary;
+    color: $background-1;
+  }
+
+}
