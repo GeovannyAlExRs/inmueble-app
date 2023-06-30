@@ -1,5 +1,5 @@
+<app-spinner *ngIf="loading$ | async"></app-spinner>
 <section fxLayout="column" fxLayoutAlign="center" class="inmbueble">
-  <app-spinner *ngIf="loading$ | async"></app-spinner>
   <mat-toolbar color="secondary"><span>Registrar nuevo inmbueble</span></mat-toolbar>
   <mat-card>
     <form fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center start" #f="ngForm" (ngSubmit)="saveInmueble(f)">
