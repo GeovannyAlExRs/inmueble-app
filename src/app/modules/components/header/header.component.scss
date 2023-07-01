@@ -4,6 +4,9 @@
   background: $primary;
   background: -webkit-linear-gradient(to right, $primary, $primary-dark-1);
   background: linear-gradient(to right, $primary, $primary-dark-1);
+  position: fixed;
+  top: 0;
+  z-index: 1;
 
   & button {
     color: $background-btn-default;
