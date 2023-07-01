@@ -3,6 +3,7 @@
 .inmbueble {
   padding: $space-20;
   height: 80vh;
+  /*border: 1px solid red;*/
 
   & mat-toolbar {
     margin: $space-05 auto;
@@ -10,7 +11,7 @@
   }
 
   & mat-card {
-    margin: $space-05 auto;
+    margin: $space-05;
     width: $percentage-100;
     padding: $space-15;
   }
@@ -60,4 +61,73 @@
   background-color: primary-ligh-1;
   color: $primary;
   font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+  .inmbueble-form {
+    &__photo {
+      &__img {
+        width: $percentage-100;
+      }
+    }
+  }
+
+  .form-input {
+    & mat-form-field, button {
+      width: $percentage-100;
+    }
+  }
+}
+
+@media screen and (max-width: 775px) {
+  mat-card {
+    margin-top: 500px;
+  }
+
+  .inmbueble-form {
+    &__photo {
+      &__img {
+        width: $percentage-050;
+      }
+    }
+  }
+
+  .form-input {
+    & mat-form-field, button {
+      width: $percentage-075;
+    }
+    & .btn-save {
+      width: $percentage-075;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .inmbueble {
+    padding: $space-10;
+  }
+  .inmbueble-form {
+    &__photo {
+      padding: $space-05;
+      &__img {
+        width: $percentage-100;
+      }
+    }
+  }
+
+  .form-input {
+    & mat-form-field, button {
+      width: $percentage-100;
+    }
+    & .btn-save {
+      width: $percentage-100;
+    }
+  }
+}
+
+@media screen and (max-width: 325px) {
+  mat-card {
+    margin: $default-0;
+    padding: $space-05;
+  }
 }
