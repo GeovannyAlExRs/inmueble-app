@@ -1,0 +1,88 @@
+@import '../../../../styles.scss';
+
+.footer {
+  border-top: 1px solid #eee;
+  padding: $space-15;
+  background: $background-white;
+  display: flex;
+  position: fixed;
+  width: $percentage-100;
+  bottom: $default-0;
+  z-index: 2;
+  height: $frame-space-050;
+
+  & .container-fluid {
+    display: flex;
+    align-items: center;
+    width: $percentage-100;
+    padding: $default-0 $space-20;
+
+    & .pull-left {
+      width: $percentage-025;
+      & .nav {
+        margin-top: $default-0;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: $default-0;
+        margin-bottom: $default-0;
+        list-style: none;
+
+      }
+    }
+}
+}
+
+.nav-item {
+  font-size: $font-size-16;
+  margin-right: $space-10;
+
+  & .nav-link{
+    color: $primary;
+  }
+
+  & .nav-link:hover, .nav-link:active {
+    color: $primary-ligh-2;
+    transition: $transition-02s;
+}
+}
+
+
+.copyright {
+  width: $percentage-075;
+  gap: $space-05;
+  font-size: $font-size-12;
+  color: $primary-dark-1;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-left: auto!important;
+
+  & .heart-color {
+    color: $error;
+  }
+
+  & a {
+    color: $primary-ligh-2;
+    list-style: none;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    padding: $default-0;
+    & .container-fluid {
+      padding: $default-0 $space-08;
+    }
+  }
+
+  .nav-item {
+    margin-right: $space-05;
+  }
+
+  .copyright {
+    p {
+      display: none;
+    }
+  }
+}

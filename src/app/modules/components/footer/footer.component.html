@@ -1,0 +1,18 @@
+<footer class="footer">
+  <div class="container-fluid">
+    <nav class="pull-left">
+      <ul class="nav">
+        <li class="nav-item" *ngFor="let item of menulink.accessLink" mat-list-item>
+          <a class="nav-link"  href="{{item.link}}" target="_blank">
+            <i [ngClass]="['uil',item.icon]"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="copyright ml-auto">
+      <p>Professional Apps Development</p>
+      {{year}}, made with <i class="uil uil-heart heart-color"></i> by
+      <a href="https://www.linkedin.com/in/geovanny-magallan-59ab5b99/">{{developer}}</a>
+    </div>
+  </div>
+</footer>
