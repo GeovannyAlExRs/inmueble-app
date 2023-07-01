@@ -4,26 +4,27 @@
   height: 80vh;
   padding: $default-0;
   margin: $default-0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .row {
   width: $percentage-075;
-  padding: $space-25;
-  /*border: 1px solid greenyellow;*/
+  padding: $space-05;
+  flex-wrap: wrap;
 }
 
 mat-card {
-  max-width: 900px;
-  min-width: 600px;
+  max-height: $percentage-075;
+  gap: $space-15;
+  flex-grow: 1;
+  background: $background-1;
+
   text-align: center;
-  padding: $space-15 $percentage-010;
+  margin: $space-10;
+  padding: $space-10 $percentage-010;
 }
 
 .image {
-  width: 20%;
+  width: $percentage-025;
 }
 
 mat-card-title {
@@ -44,6 +45,37 @@ p {
 
 .card-footer__btn:hover, .card-footer__btn:active {
   color: $primary;
-  font-size: $font-size-22;
   transition: $transition-02s;
+}
+
+@media screen and (max-width: 775px) {
+  .row {
+    width: $percentage-100;
+  }
+
+  mat-card {
+    margin: $space-10;
+    padding: $space-08;
+    max-height: $frame-space-400;
+  }
+
+  .image {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .image {
+    width: $percentage-030;
+  }
+
+  mat-card-title {
+    font-size: $font-size-16 !important;
+  }
+  mat-card-subtitle {
+    font-size: $font-size-12 !important;
+  }
+  p {
+    font-size: $font-size-10 !important;
+  }
 }

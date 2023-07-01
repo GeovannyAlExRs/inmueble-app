@@ -1,6 +1,6 @@
-<section class="flex-container">
+<section class="flex-container" fxLayoutAlign="center center" >
   <div class="row">
-    <mat-card fxFlex fxLayout fxLayoutAlign="center">
+    <mat-card fxLayout="column" fxLayoutAlign="space-around center">
 
       <mat-card-header>
         <div class="card-img">
@@ -9,11 +9,18 @@
       </mat-card-header>
 
       <mat-card-title>Bienvenido a Inmueble App EC</mat-card-title>
-      <mat-card-subtitle>Desarrollo profesional de Apps</mat-card-subtitle>
-      <mat-card-content>
-        <p>Aplicacion web de inmueble, desarrollado con tecnologias: Angular, TypeScript (Front-end), Micro services Java con Spring (Back-end) y FireStore and FireStorage</p>
+      <mat-card-subtitle>Servicio de compra de inmuebles (En Desarrollo...)</mat-card-subtitle>
+      <mat-card-content fxFlex fxLayout="column">
+        <!--p>Desarrollo profesional de Apps</p-->
+        <small>
+          <p>
+            Aplicacion web reponsive de Inmuebles, desarrollado con tecnologias: Angular,
+            TypeScript (Front-end), Micro servicios en Java con Spring Boot (Back-end),
+            con almacenamiento Base de datos PosgrestSQL, MySQL y servicios de Firebase.
+          </p>
+        </small>
         <br>
-        <mat-card-footer fxFlex fxLayout fxLayoutAlign="center">
+        <mat-card-footer fxLayoutAlign="center">
           <a  href="{{item.link}}" *ngFor="let item of menulink.accessLink" class="card-footer__btn" target="_blank">
             <span class="btn-inner--icon">
               <i [ngClass]="['uil',item.icon]"></i>

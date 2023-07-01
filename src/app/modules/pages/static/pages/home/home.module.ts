@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
 import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule,
   ]
 })
 export class HomeModule { }
