@@ -21,21 +21,27 @@
 .side-bar {
   padding: $default-0;
   margin: $default-0;
-  width: $percentage-050;
+  width: $percentage-100;
 
   & li {
     list-style: none;
-    font-size: $font-size-20;
     text-decoration: none;
-    color: $background-2;
-    width: $percentage-030;
-    border-radius: $space-08;
+
+    font-size: $font-size-14;
     text-align: center;
+    width: $frame-space-100 + $space-20;
+
+    color: $background-2;
+    border-radius: $space-08;
+    padding: $default-0 $space-08;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   & li:hover, li:active {
     cursor: pointer;
-    font-size: $font-size-18;
     color: $primary;
     background-color: $background-btn-hover-1;
     transition: $transition-02s;
@@ -43,7 +49,6 @@
 }
 
 .list-label {
-  margin-left: $space-08;
+  margin-left: $space-05;
 }
-
 

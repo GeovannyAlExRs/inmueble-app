@@ -5,14 +5,14 @@
   <div fxLayout class="toolbar-background__img">
     <img class="image" src="../../../../assets/img/lg_inmueble_app_bn.png" alt="">
   </div>
-  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-    <ul fxLayout="row" fxLayoutGap="25px" class="side-bar">
-      <li><a>{{ users ? users.username : null }}</a></li>
-      <li fxHide.sm [routerLink]="item.router" [queryParams]="item.query" *ngFor="let item of mainMenu.defaultOptions" mat-list-item>
-          <a (click)="logoutUser(item.name)" *ngIf="users? item.band : !item.band" class="list-wrapper-item">
-              <i [ngClass]="['uil',item.icon]"></i>
-              <span class="list-label">{{item.name}}</span>
-          </a>
+  <div fxFlex fxLayout fxHide.xs>
+    <ul fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="5px" class="side-bar">
+      <li><small><a>{{ users ? users.username : null }}</a></small></li>
+      <li [hidden]="users? !item.band : item.band" fxHide.sm [routerLink]="item.router" [queryParams]="item.query" *ngFor="let item of mainMenu.defaultOptions" mat-list-item>
+        <a (click)="logoutUser(item.name)" class="list-wrapper-item"><!-- *ngIf="users? item.band : !item.band"-->
+            <i [ngClass]="['uil',item.icon]"></i>
+            <span class="list-label">{{item.name}}</span>
+        </a>
       </li>
   </ul>
   </div>
