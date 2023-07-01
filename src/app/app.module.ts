@@ -32,6 +32,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HeaderComponent } from './modules/components/header/header.component'
 import { MenuListComponent } from './modules/components/menu-list/menu-list.component'
+import { FooterComponent } from '@modules/components/footer/footer.component';
 
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -47,7 +48,8 @@ const StoreDevTools = !environment.production ? StoreDevtoolsModule.instrument({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MenuListComponent
+    MenuListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
