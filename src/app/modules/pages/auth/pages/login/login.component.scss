@@ -1,31 +1,42 @@
 @import '../../../../../../styles.scss';
 
-.container-form-login, .card-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container-form-login, section, mat-card, form, .image {
+  margin: $default-0;
+
 }
 
 .container-form-login {
-  height: 80vh;
+  height: 100vh;
+  padding: $default-0;
   & section{
-    width: $percentage-030;
+    width: $percentage-100;
+    max-height: $percentage-100;
+    text-align: center;
   }
 }
 
 mat-card {
-  padding: $space-05 $space-25;
-  width: $percentage-100;
+  max-width: $percentage-030;
+  /*height: $frame-space-400 + $frame-space-050;*/
   text-align: center;
   box-shadow: $shadow-2 !important;
   border-radius: $space-10 !important;
+  padding: $space-10;
+
+  & mat-card-header {
+    padding: $default-0 !important;
+  }
+
   & form {
-    padding: $space-12;
+    padding: $space-08 $space-20 !important;
+    max-width: $percentage-100;
+    padding: $default-0;
   }
   & mat-card-title {
     color: $primary;
     font-size: $font-size-22;
     letter-spacing: $space-12;
+
   }
   & .btn-sign-in, .btn-sign-up {
     width: $percentage-100;
@@ -48,9 +59,48 @@ mat-card {
 
 .image {
   width: $percentage-025;
-  margin: $default-0;
 }
 
-mat-form-field {
-  width: 100%;
+@media screen and (max-width: 775px) {
+  section{
+    margin-top: $space-10;
+
+    & mat-card {
+      max-width: $percentage-050;
+
+      & mat-card-header {
+        max-width: $percentage-100;
+        display: flex;
+        justify-content: center;
+
+        & .card-img {
+          max-width: $percentage-075;
+        }
+      }
+    }
+  }
+
+  .image {
+    width: $percentage-025;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  mat-card-subtitle {
+    font-size: $font-size-12 !important;
+  }
+
+  section {
+    margin-top: $default-0;
+    flex-wrap: wrap;
+    padding: $default-0 $space-20;
+    & mat-card {
+      padding: $default-0;
+      max-width: 1500px;
+      flex-grow: 1;
+    }
+  }
+  .image {
+    margin-top: $space-05;
+  }
 }

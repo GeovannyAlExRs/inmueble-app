@@ -1,7 +1,7 @@
-<div class="container-form-login">
+<div fxLayoutAlign=" center center" class="container-form-login">
   <app-spinner *ngIf="loading$ | async"></app-spinner>
-  <section fxLayoutAlign="center">
-    <mat-card>
+  <section fxFlex fxLayoutAlign="center">
+    <mat-card fxLayout="column">
 
       <mat-card-header>
         <div class="card-img">
@@ -14,7 +14,7 @@
         <mat-card-subtitle>¡Hola, Bienvenido a Inmueble APP EC 👋</mat-card-subtitle>
       </mat-card-content>
 
-      <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="loginUser(f)">
+      <form fxLayout="column" fxLayoutGap="5px" #f="ngForm" (ngSubmit)="loginUser(f)">
 
         <mat-form-field appearance="outline">
           <mat-label>Correo</mat-label>
