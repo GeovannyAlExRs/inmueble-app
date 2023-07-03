@@ -77,7 +77,7 @@ mat-card-actions {
     &__item {
       flex-wrap: wrap !important;
       &__sub-card {
-        width: $frame-space-300 +$frame-space-025;
+        width: $frame-space-300 (+$frame-space-025);
         flex-grow: 1 !important;
       }
     }
