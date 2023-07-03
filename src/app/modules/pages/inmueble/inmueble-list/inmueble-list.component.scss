@@ -1,9 +1,12 @@
 @import '../../../../../styles.scss';
 
+.container-inmueble {
+  margin: $percentage-005 $default-0;
+}
+
 .inmbueble {
   display: flex;
   padding: $default-0;
-  height: 70vh;
 }
 
 .cards {
@@ -18,10 +21,6 @@
     padding: $space-15;
     gap: $space-15;
     flex-grow: 1;
-
-    &__sub-card {
-      max-width: $frame-space-300;
-    }
   }
 }
 
@@ -45,7 +44,6 @@ mat-card-actions button {
 }
 
 mat-card-actions {
-
   & .btn{
     background: $background-btn-hover-1;
   }
@@ -59,5 +57,51 @@ mat-card-actions {
     background: $primary;
     color: $background-1;
   }
+}
 
+@media screen and (min-width: 1024px) {
+  .cards {
+    &__item {
+      &__sub-card {
+        max-width: $frame-space-300;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 775px) {
+  .container-inmueble {
+    margin: 8% $default-0;
+  }
+  .cards {
+    &__item {
+      flex-wrap: wrap !important;
+      &__sub-card {
+        width: $frame-space-300 +$frame-space-025;
+        flex-grow: 1 !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container-inmueble {
+    margin: 12% 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container-inmueble {
+    margin: 16% 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cards {
+    &__item {
+      &__sub-card {
+        width: $percentage-100;
+      }
+    }
+  }
 }

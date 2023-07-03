@@ -7,7 +7,7 @@
   flex-grow: 1;
 
   & input {
-    font-size: $font-size-18;
+    font-size: $font-size-16;
     width: $percentage-100;
     height: $frame-space-025;
     padding: $space-15;
@@ -17,10 +17,20 @@
 
     border-radius: $frame-space-050;
     border: $default-0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   & input:focus {
     outline: unset;
     border: 1px solid $background-btn-hover-2;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  input {
+    font-size: $font-size-14 !important;
   }
 }
