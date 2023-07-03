@@ -2,17 +2,16 @@
 
 .inmbueble {
   padding: $space-20;
-  height: 80vh;
   /*border: 1px solid red;*/
 
   & mat-toolbar {
+    width: $percentage-100;
     margin: $space-05 auto;
     border-radius: $space-08;
   }
 
   & mat-card {
     margin: $space-05;
-    width: $percentage-100;
     padding: $space-15;
   }
 }
@@ -63,7 +62,12 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1000px) {
+  .inmbueble {
+    margin-bottom: $default-0 !important;
+    margin: 3.5% $percentage-010;
+  }
+
   .inmbueble-form {
     &__photo {
       &__img {
@@ -80,8 +84,14 @@
 }
 
 @media screen and (max-width: 775px) {
+  .inmbueble {
+    margin: 7% $default-0 !important;
+
+  }
+
   mat-card {
     margin-top: 500px;
+    margin-bottom: $percentage-025;
   }
 
   .inmbueble-form {
@@ -105,7 +115,9 @@
 @media screen and (max-width: 450px) {
   .inmbueble {
     padding: $space-10;
+    margin: 12% $default-0 !important;
   }
+
   .inmbueble-form {
     &__photo {
       padding: $space-05;
@@ -125,7 +137,11 @@
   }
 }
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 375px) {
+  .inmbueble {
+    margin: 15% $default-0 !important;
+  }
+
   mat-card {
     margin: $default-0;
     padding: $space-05;
