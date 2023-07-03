@@ -4,7 +4,7 @@
   &__photo {
     width: $percentage-100;
     height: 50vh;
-    background-image: 'https://firebasestorage.googleapis.com/v0/b/inmueble-ec.appspot.com/o/img-static%2Fimg_inmueble.png?alt=media&token=1c29c45d-4497-4a82-80d2-e7a6220f343a';
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/inmueble-ec.appspot.com/o/img-static%2Fimg_inmueble.png?alt=media&token=1c29c45d-4497-4a82-80d2-e7a6220f343a');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
